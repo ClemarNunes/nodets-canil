@@ -6,7 +6,7 @@ import { createMenuObject } from '../helpers/createMenuObject'
 
 export const home = (req: Request, res: Response) => {
     let list = Pet.getAll();
-    // res.send('home no controller');
+     
     res.render('pages/page', {
         menu: createMenuObject('all'),
         banner: {
@@ -27,7 +27,7 @@ export const dogs = (req: Request, res: Response) => {
         },
         list
     })
-    // res.render('page/page')
+  
 }
 export const cats = (req: Request, res: Response) => {
     let list = Pet.getFromType('cat');
@@ -40,7 +40,7 @@ export const cats = (req: Request, res: Response) => {
         },
         list
     })
-    // res.render('page/page')
+ 
 }
 export const fishes = (req: Request, res: Response) => {
     let list = Pet.getFromType('fish');
@@ -53,5 +53,5 @@ export const fishes = (req: Request, res: Response) => {
         },
         list
     })
-     // res.render('page/page')
+     
 }
